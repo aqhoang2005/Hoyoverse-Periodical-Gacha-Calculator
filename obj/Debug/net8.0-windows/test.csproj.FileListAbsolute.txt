@@ -30,3 +30,5 @@ C:\Users\Austins-PC\OneDrive - SNHU\test\test\obj\Debug\net8.0-windows\refint\te
 C:\Users\Austins-PC\OneDrive - SNHU\test\test\obj\Debug\net8.0-windows\test.pdb
 C:\Users\Austins-PC\OneDrive - SNHU\test\test\obj\Debug\net8.0-windows\test.genruntimeconfig.cache
 C:\Users\Austins-PC\OneDrive - SNHU\test\test\obj\Debug\net8.0-windows\ref\test.dll
+C:\Users\Austins-PC\OneDrive - SNHU\test\test\obj\Debug\net8.0-windows\test.Properties.Resources.resources
+C:\Users\Austins-PC\OneDrive - SNHU\test\test\obj\Debug\net8.0-windows\test.sourcelink.json

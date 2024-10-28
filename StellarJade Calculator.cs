@@ -7,6 +7,7 @@ namespace test
         int daysYield;
         int simUniYield;
         int simUniWeeks;
+        int totalYield;
         public Form1()
         {
             InitializeComponent();
@@ -79,7 +80,7 @@ namespace test
             UpdateDayYield();
             UpdateDaysSelected();
         }
-        private void calculateButton_Click(object sender, EventArgs e) 
+        private void calculateButton_Click(object sender, EventArgs e)
         {
             UpdateDaysSelected();
             UpdateDayYield();
@@ -88,7 +89,7 @@ namespace test
             simUniWeeks = daysSelected / 7;
             if (simUniWeeks < 1)
             {
-                simUniWeeks = 1;                
+                simUniWeeks = 1;
             }
             else
             {
@@ -96,6 +97,10 @@ namespace test
             }
 
             lblSimUni.Text = $"Simulated Universe Weekly Stellar Jades: {simUniYield}";
+
+            totalYield = daysYield + simUniYield;
+
+            lblTotalYield.Text = $"Approximate Total: {totalYield}";
         }
 
         private void tbExpressDays_KeyPress(object sender, KeyPressEventArgs e)
@@ -115,5 +120,11 @@ namespace test
 
             }
         }
+
+        private void helpButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("-Daily missions give out 60 currency, unless a premium pass is active, which will give an additional 90, totaling 150." + "\n" + "\n" + 
+                            "-For Honkai Star Rail, weekly Simulated Universe runs give 225 stellar jades.", "Information + Context for Calculator");
         }
+    }
 }

@@ -40,6 +40,8 @@
             label2 = new Label();
             calculateButton = new Button();
             lblSimUni = new Label();
+            helpButton = new Button();
+            lblTotalYield = new Label();
             SuspendLayout();
             // 
             // lblDaysSelected
@@ -147,11 +149,32 @@
             lblSimUni.TabIndex = 13;
             lblSimUni.Text = "Simulated Universe Weekly Stellar Jades:";
             // 
+            // helpButton
+            // 
+            helpButton.Location = new Point(10, 4);
+            helpButton.Name = "helpButton";
+            helpButton.Size = new Size(19, 19);
+            helpButton.TabIndex = 14;
+            helpButton.Text = "?";
+            helpButton.UseVisualStyleBackColor = true;
+            helpButton.Click += helpButton_Click;
+            // 
+            // lblTotalYield
+            // 
+            lblTotalYield.AutoSize = true;
+            lblTotalYield.Location = new Point(10, 264);
+            lblTotalYield.Name = "lblTotalYield";
+            lblTotalYield.Size = new Size(107, 15);
+            lblTotalYield.TabIndex = 15;
+            lblTotalYield.Text = "Approximate Total:";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(700, 338);
+            Controls.Add(lblTotalYield);
+            Controls.Add(helpButton);
             Controls.Add(lblSimUni);
             Controls.Add(calculateButton);
             Controls.Add(label2);
@@ -183,5 +206,7 @@
         private Label label2;
         private Button calculateButton;
         private Label lblSimUni;
+        private Button helpButton;
+        private Label lblTotalYield;
     }
 }
