@@ -1,2 +1,2 @@
 # Hoyoverse Periodical Gacha Calculator
- Calculates gacha currency in a given period of time.
+ Calculates gacha currency from the Hoyoverse games in a given amount of time.
