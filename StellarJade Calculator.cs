@@ -8,6 +8,7 @@ namespace test
         int simUniYield;
         int simUniWeeks;
         int totalYield;
+        int jadesOnHand;
         public Form1()
         {
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace test
                 MessageBox.Show("End date must be greater / equal to start date.");
                 return;
             }
-            daysSelected = (dateTimePickerEnd.Value - dateTimePickerStart.Value).Days + 1; //Including starting date.
+            daysSelected = (dateTimePickerEnd.Value - dateTimePickerStart.Value).Days; //Including starting date.
             lblDaysSelected.Text = $"Days Selected: {daysSelected}";
         }
 
@@ -67,6 +68,18 @@ namespace test
                 // If Express Pass is not checked, base yield calculation
                 daysYield = daysSelected * 60;
             }
+
+            if (!string.IsNullOrWhiteSpace(tbJadesOnHand.Text) && int.TryParse(tbJadesOnHand.Text, out int userJades))
+            {
+                jadesOnHand = userJades;
+            }
+            else
+            {
+                jadesOnHand = 0;
+            }
+
+
+
         }
 
 
@@ -98,9 +111,9 @@ namespace test
 
             lblSimUni.Text = $"Simulated Universe Weekly Stellar Jades: {simUniYield}";
 
-            totalYield = daysYield + simUniYield;
+            totalYield = daysYield + simUniYield + jadesOnHand;
 
-            lblTotalYield.Text = $"Approximate Total: {totalYield}";
+            lblTotalYield.Text = $"Approximate Obtained Total: {totalYield}";
         }
 
         private void tbExpressDays_KeyPress(object sender, KeyPressEventArgs e)
@@ -117,14 +130,19 @@ namespace test
             {
                 UpdateDayYield();
                 UpdateDaysSelected();
-
             }
         }
 
         private void helpButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("-Daily missions give out 60 currency, unless a premium pass is active, which will give an additional 90, totaling 150." + "\n" + "\n" + 
-                            "-For Honkai Star Rail, weekly Simulated Universe runs give 225 stellar jades.", "Information + Context for Calculator");
+            MessageBox.Show("-Daily missions give out 60 currency, unless a premium pass is active, which will give an additional 90, totaling 150." + "\n" + "\n" +
+                            "-For Honkai Star Rail, weekly Simulated/Divergent Universe runs give 225 stellar jades.", "Information + Context for Calculator");
+        }
+
+        private void onHandCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            tbJadesOnHand.Visible = onHandCheck.Checked;
+            lblJadesOnHand.Visible = onHandCheck.Checked;
         }
     }
 }

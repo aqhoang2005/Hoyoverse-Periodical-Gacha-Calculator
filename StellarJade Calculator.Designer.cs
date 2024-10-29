@@ -42,33 +42,35 @@
             lblSimUni = new Label();
             helpButton = new Button();
             lblTotalYield = new Label();
+            onHandCheck = new CheckBox();
+            lblJadesOnHand = new Label();
+            tbJadesOnHand = new TextBox();
             SuspendLayout();
             // 
             // lblDaysSelected
             // 
             lblDaysSelected.AutoSize = true;
-            lblDaysSelected.Location = new Point(10, 105);
+            lblDaysSelected.Location = new Point(11, 140);
             lblDaysSelected.Name = "lblDaysSelected";
-            lblDaysSelected.Size = new Size(82, 15);
+            lblDaysSelected.Size = new Size(105, 20);
             lblDaysSelected.TabIndex = 1;
             lblDaysSelected.Text = "Days Selected:";
             // 
             // lbljadesDaily
             // 
             lbljadesDaily.AutoSize = true;
-            lbljadesDaily.Location = new Point(10, 169);
+            lbljadesDaily.Location = new Point(11, 225);
             lbljadesDaily.Name = "lbljadesDaily";
-            lbljadesDaily.Size = new Size(102, 15);
+            lbljadesDaily.Size = new Size(132, 20);
             lbljadesDaily.TabIndex = 2;
             lbljadesDaily.Text = "Daily Stellar Jades:";
             // 
             // expressPass
             // 
             expressPass.AutoSize = true;
-            expressPass.Location = new Point(10, 122);
-            expressPass.Margin = new Padding(3, 2, 3, 2);
+            expressPass.Location = new Point(11, 163);
             expressPass.Name = "expressPass";
-            expressPass.Size = new Size(134, 19);
+            expressPass.Size = new Size(167, 24);
             expressPass.TabIndex = 3;
             expressPass.Text = "Enable Express Pass?";
             expressPass.UseVisualStyleBackColor = true;
@@ -76,10 +78,9 @@
             // 
             // tbExpressDays
             // 
-            tbExpressDays.Location = new Point(245, 120);
-            tbExpressDays.Margin = new Padding(3, 2, 3, 2);
+            tbExpressDays.Location = new Point(280, 160);
             tbExpressDays.Name = "tbExpressDays";
-            tbExpressDays.Size = new Size(110, 23);
+            tbExpressDays.Size = new Size(125, 27);
             tbExpressDays.TabIndex = 5;
             tbExpressDays.Visible = false;
             tbExpressDays.KeyPress += tbExpressDays_KeyPress;
@@ -87,54 +88,51 @@
             // lblExpressActive
             // 
             lblExpressActive.AutoSize = true;
-            lblExpressActive.Location = new Point(162, 123);
+            lblExpressActive.Location = new Point(185, 164);
             lblExpressActive.Name = "lblExpressActive";
-            lblExpressActive.Size = new Size(71, 15);
+            lblExpressActive.Size = new Size(89, 20);
             lblExpressActive.TabIndex = 6;
             lblExpressActive.Text = "Days Active:";
             lblExpressActive.Visible = false;
             // 
             // dateTimePickerStart
             // 
-            dateTimePickerStart.Location = new Point(10, 26);
-            dateTimePickerStart.Margin = new Padding(3, 2, 3, 2);
+            dateTimePickerStart.Location = new Point(11, 35);
             dateTimePickerStart.Name = "dateTimePickerStart";
-            dateTimePickerStart.Size = new Size(211, 23);
+            dateTimePickerStart.Size = new Size(241, 27);
             dateTimePickerStart.TabIndex = 7;
             // 
             // dateTimePickerEnd
             // 
-            dateTimePickerEnd.Location = new Point(10, 78);
-            dateTimePickerEnd.Margin = new Padding(3, 2, 3, 2);
+            dateTimePickerEnd.Location = new Point(11, 104);
             dateTimePickerEnd.Name = "dateTimePickerEnd";
-            dateTimePickerEnd.Size = new Size(211, 23);
+            dateTimePickerEnd.Size = new Size(241, 27);
             dateTimePickerEnd.TabIndex = 8;
             dateTimePickerEnd.Value = new DateTime(2024, 10, 29, 0, 0, 0, 0);
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(78, 8);
+            label1.Location = new Point(89, 11);
             label1.Name = "label1";
-            label1.Size = new Size(78, 15);
+            label1.Size = new Size(100, 20);
             label1.TabIndex = 9;
             label1.Text = "Starting Date:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(89, 61);
+            label2.Location = new Point(102, 81);
             label2.Name = "label2";
-            label2.Size = new Size(57, 15);
+            label2.Size = new Size(73, 20);
             label2.TabIndex = 10;
             label2.Text = "End Date:";
             // 
             // calculateButton
             // 
-            calculateButton.Location = new Point(10, 145);
-            calculateButton.Margin = new Padding(3, 2, 3, 2);
+            calculateButton.Location = new Point(11, 193);
             calculateButton.Name = "calculateButton";
-            calculateButton.Size = new Size(211, 22);
+            calculateButton.Size = new Size(241, 29);
             calculateButton.TabIndex = 12;
             calculateButton.Text = "Calculate";
             calculateButton.UseVisualStyleBackColor = true;
@@ -143,17 +141,18 @@
             // lblSimUni
             // 
             lblSimUni.AutoSize = true;
-            lblSimUni.Location = new Point(10, 184);
+            lblSimUni.Location = new Point(11, 245);
             lblSimUni.Name = "lblSimUni";
-            lblSimUni.Size = new Size(218, 15);
+            lblSimUni.Size = new Size(276, 20);
             lblSimUni.TabIndex = 13;
             lblSimUni.Text = "Simulated Universe Weekly Stellar Jades:";
             // 
             // helpButton
             // 
-            helpButton.Location = new Point(10, 4);
+            helpButton.Location = new Point(11, 5);
+            helpButton.Margin = new Padding(3, 4, 3, 4);
             helpButton.Name = "helpButton";
-            helpButton.Size = new Size(19, 19);
+            helpButton.Size = new Size(22, 25);
             helpButton.TabIndex = 14;
             helpButton.Text = "?";
             helpButton.UseVisualStyleBackColor = true;
@@ -162,17 +161,49 @@
             // lblTotalYield
             // 
             lblTotalYield.AutoSize = true;
-            lblTotalYield.Location = new Point(10, 264);
+            lblTotalYield.Location = new Point(11, 354);
             lblTotalYield.Name = "lblTotalYield";
-            lblTotalYield.Size = new Size(107, 15);
+            lblTotalYield.Size = new Size(202, 20);
             lblTotalYield.TabIndex = 15;
-            lblTotalYield.Text = "Approximate Total:";
+            lblTotalYield.Text = "Approximate Obtained Total:";
+            // 
+            // onHandCheck
+            // 
+            onHandCheck.AutoSize = true;
+            onHandCheck.Location = new Point(11, 272);
+            onHandCheck.Name = "onHandCheck";
+            onHandCheck.Size = new Size(144, 24);
+            onHandCheck.TabIndex = 16;
+            onHandCheck.Text = "Include On-Hand";
+            onHandCheck.UseVisualStyleBackColor = true;
+            onHandCheck.CheckedChanged += onHandCheck_CheckedChanged;
+            // 
+            // lblJadesOnHand
+            // 
+            lblJadesOnHand.AutoSize = true;
+            lblJadesOnHand.Location = new Point(185, 272);
+            lblJadesOnHand.Name = "lblJadesOnHand";
+            lblJadesOnHand.Size = new Size(157, 20);
+            lblJadesOnHand.TabIndex = 17;
+            lblJadesOnHand.Text = "Stellar Jades On Hand:";
+            lblJadesOnHand.Visible = false;
+            // 
+            // tbJadesOnHand
+            // 
+            tbJadesOnHand.Location = new Point(348, 269);
+            tbJadesOnHand.Name = "tbJadesOnHand";
+            tbJadesOnHand.Size = new Size(125, 27);
+            tbJadesOnHand.TabIndex = 18;
+            tbJadesOnHand.Visible = false;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(700, 338);
+            ClientSize = new Size(800, 451);
+            Controls.Add(tbJadesOnHand);
+            Controls.Add(lblJadesOnHand);
+            Controls.Add(onHandCheck);
             Controls.Add(lblTotalYield);
             Controls.Add(helpButton);
             Controls.Add(lblSimUni);
@@ -187,9 +218,8 @@
             Controls.Add(lbljadesDaily);
             Controls.Add(lblDaysSelected);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
-            Text = "Periodical Stellar Jade Calculator";
+            Text = "Hoyoverse Periodical Calculator";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -208,5 +238,8 @@
         private Label lblSimUni;
         private Button helpButton;
         private Label lblTotalYield;
+        private CheckBox onHandCheck;
+        private Label lblJadesOnHand;
+        private TextBox tbJadesOnHand;
     }
 }

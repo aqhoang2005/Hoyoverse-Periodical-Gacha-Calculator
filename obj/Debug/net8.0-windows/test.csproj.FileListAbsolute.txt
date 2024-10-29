@@ -32,3 +32,5 @@ C:\Users\Austins-PC\OneDrive - SNHU\test\test\obj\Debug\net8.0-windows\test.genr
 C:\Users\Austins-PC\OneDrive - SNHU\test\test\obj\Debug\net8.0-windows\ref\test.dll
 C:\Users\Austins-PC\OneDrive - SNHU\test\test\obj\Debug\net8.0-windows\test.Properties.Resources.resources
 C:\Users\Austins-PC\OneDrive - SNHU\test\test\obj\Debug\net8.0-windows\test.sourcelink.json
+C:\Users\austi\OneDrive - SNHU\test\test\obj\Debug\net8.0-windows\test.Properties.Resources.resources
+C:\Users\austi\OneDrive - SNHU\test\test\obj\Debug\net8.0-windows\test.sourcelink.json
